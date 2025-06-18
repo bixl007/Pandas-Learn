@@ -24,3 +24,13 @@ print(df.to_string())
 
 df.dropna(subset=['Date'], inplace = True)
 print(df.to_string())
+
+'''
+for x in df.index:
+    if df.loc[x, "Duration"] > 120:
+        df.drop(x)
+
+        This statement will remove the row
+'''
+
+print(df.duplicated()) # return tru for row that is a duplicate
